@@ -1,39 +1,19 @@
-name: "\U0001F680 New feature proposal"
-description: Suggest an idea for this project
-labels: [":sparkles: feature request"]
-body:
-  - type: markdown
-    attributes:
-      value: |
-       **Before You Start...**
+---
+name: Feature request
+about: Suggest an idea for this project
+title: ''
+labels: ''
+assignees: ''
 
-        This form is only for submitting feature requests. If you have a usage question
-        or are unsure if this is really a bug, make sure to:
+---
 
-        - Read the [docs](https://vuejs.org/)
-        - Ask on [Discord Chat](https://chat.vuejs.org/)
-        - Ask on [GitHub Discussions](https://github.com/vuejs/core/discussions)
-        - Look for / ask questions on [Stack Overflow](https://stackoverflow.com/questions/ask?tags=vue.js)
+**Is your feature request related to a problem? Please describe.(您的功能请求是否与问题相关？请描述一下)**
 
-        Also try to search for your issue - another user may have already requested something similar!
+**Describe the solution you'd like(描述您想要的解决方案)**
+A clear and concise description of what you want to happen.
 
-  - type: textarea
-    id: problem-description
-    attributes:
-      label: What problem does this feature solve?
-      description: |
-        Explain your use case, context, and rationale behind this feature request. More importantly, what is the **end user experience** you are trying to build that led to the need for this feature?
+**Describe alternatives you've considered(描述您考虑过的备选方案)**
+A clear and concise description of any alternative solutions or features you've considered.
 
-        An important design goal of Vue is keeping the API surface small and straightforward. In general, we only consider adding new features that solve a problem that cannot be easily dealt with using existing APIs (i.e. not just an alternative way of doing things that can already be done). The problem should also be common enough to justify the addition.
-      placeholder: Problem description
-    validations:
-      required: true
-  - type: textarea
-    id: proposed-API
-    attributes:
-      label: What does the proposed API look like?
-      description: |
-        Describe how you propose to solve the problem and provide code samples of how the API would work once implemented. Note that you can use [Markdown](https://guides.github.com/features/mastering-markdown/) to format your code blocks.
-      placeholder: Steps to reproduce
-    validations:
-      required: true
+**Additional context(附加截图)**
+Add any other context or screenshots about the feature request here.
