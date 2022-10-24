@@ -1,20 +1,39 @@
----
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+name: "\U0001F680 New feature proposal"
+description: Suggest an idea for this project
+labels: [":sparkles: feature request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+       **Before You Start...**
 
----
+        This form is only for submitting feature requests. If you have a usage question
+        or are unsure if this is really a bug, make sure to:
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+        - Read the [docs](https://vuejs.org/)
+        - Ask on [Discord Chat](https://chat.vuejs.org/)
+        - Ask on [GitHub Discussions](https://github.com/vuejs/core/discussions)
+        - Look for / ask questions on [Stack Overflow](https://stackoverflow.com/questions/ask?tags=vue.js)
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+        Also try to search for your issue - another user may have already requested something similar!
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: What problem does this feature solve?
+      description: |
+        Explain your use case, context, and rationale behind this feature request. More importantly, what is the **end user experience** you are trying to build that led to the need for this feature?
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+        An important design goal of Vue is keeping the API surface small and straightforward. In general, we only consider adding new features that solve a problem that cannot be easily dealt with using existing APIs (i.e. not just an alternative way of doing things that can already be done). The problem should also be common enough to justify the addition.
+      placeholder: Problem description
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-API
+    attributes:
+      label: What does the proposed API look like?
+      description: |
+        Describe how you propose to solve the problem and provide code samples of how the API would work once implemented. Note that you can use [Markdown](https://guides.github.com/features/mastering-markdown/) to format your code blocks.
+      placeholder: Steps to reproduce
+    validations:
+      required: true
