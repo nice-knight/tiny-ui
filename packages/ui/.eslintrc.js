@@ -5,7 +5,7 @@ module.exports = {
         "node": true
     },
     "extends": [
-        "plugin:vue/vue3-recommended",
+        "plugin:vue/vue3-recommended"
     ],
     "parserOptions": {
         "parser": "@typescript-eslint/parser",
@@ -16,6 +16,10 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-        "vue/multi-word-component-names": "off"
+        "vue/multi-word-component-names": "off",
+        "semi": 2,
+        "indent": ["error", 4],
+        "eol-last": 2,
+        'no-extra-semi': 2,
     }
 };
