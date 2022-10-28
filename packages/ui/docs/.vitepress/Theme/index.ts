@@ -1,11 +1,13 @@
 import DefaultTheme from 'vitepress/theme';
 import tinyUi from "../../../packages/index";
-import PreView from "./components/PreView.vue"
+import PreView from "./components/PreView.vue";
+// 导入Unocss
+import 'uno.css'
 
 export default {
-    ...DefaultTheme,
-    enhanceApp({ app }) {
-        app.component('PreView', PreView);
-        app.use(tinyUi);
-    }
+  ...DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('PreView', PreView);
+    app.use(tinyUi);
+  }
 }
