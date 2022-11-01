@@ -10,11 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@unocss/preset-attributify": "^0.46.1",
-    "@unocss/preset-icons": "^0.46.1",
-    "@unocss/preset-uno": "^0.46.1",
-    "typescript": "^4.8.4",
-    "unocss": "^0.46.1"
+    "typescript": "^4.8.4"
   },
   "dependencies": {
     "vue": "^3.2.41"
