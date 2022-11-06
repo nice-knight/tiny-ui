@@ -3,7 +3,7 @@
 </script>
 <template>
   <div class="Button">
-    11
+    <slot name="default"></slot>
   </div>
 </template>
 <style lang="scss">
