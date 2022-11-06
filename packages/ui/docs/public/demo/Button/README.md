@@ -11,8 +11,7 @@ import demo from './demo.vue'
 简单的按钮展示
 
 ## 基础用法
-
-<PreView compName="Button" demoName="demo">
+<PreView comp-name="Button" demo-name="demo">
   <demo />
 </PreView>
 

@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme';
-import tinyUi from "../../../packages/index";
+import tinyUi from "../../../src/index";
 import PreView from "./components/PreView.vue";
 // 导入Unocss
 import 'uno.css';

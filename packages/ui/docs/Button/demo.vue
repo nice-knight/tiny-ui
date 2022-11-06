@@ -2,6 +2,6 @@
 </script>
 <template>
   <div class="demo">
-    <TinyButton />
+    <TinyButton>23333</TinyButton>
   </div>
 </template>
