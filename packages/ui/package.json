@@ -28,5 +28,8 @@
     "vite": "^3.2.2",
     "vitepress": "1.0.0-alpha.27",
     "vitest": "^0.24.5"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.41"
   }
 }
