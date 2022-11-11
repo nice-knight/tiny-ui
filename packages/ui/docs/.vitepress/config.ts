@@ -21,6 +21,7 @@ export default defineConfig({
     themeConfig: {
         siteTitle: 'Tiny-ui',
         nav:navbarZh,
+        
         carbonAds: {
             code: 'CEBDT27Y',
             placement: 'vuejsorg'
@@ -28,11 +29,11 @@ export default defineConfig({
         socialLinks: [
             { icon: 'github', link: 'https://github.com/nice-knight/tiny-ui' }
         ],
+        sidebar: sidebarZh,
         footer: {
-            message: '麻雀团队荣誉出品成员名单',
-            copyright: 'Copyright © 2022-present 麻雀团队荣誉出品'
-        },
-        sidebar: sidebarZh
+          message: '麻雀团队荣誉出品成员名单',
+          copyright: 'Copyright © 2022-present 麻雀团队荣誉出品'
+      },
     },
     // ...
 })
