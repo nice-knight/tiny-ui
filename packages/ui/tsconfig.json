@@ -5,5 +5,6 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "scripts/**/*.ts",
+    "docs/.vitepress/configs",
     "docs/.vitepress/theme"],
 }
