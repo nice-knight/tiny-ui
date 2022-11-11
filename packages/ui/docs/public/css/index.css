@@ -4,7 +4,8 @@
   }
   @media (min-width: 960px) {
   .VPNavBarTitle.has-sidebar[data-v-27a33f06] {
-      margin-right: 32px;
+      /* margin-right: 32px; */
+      margin-left: 32px;
       width: calc(var(--vp-sidebar-width) - 64px);
       border-bottom-color: var(--vp-c-divider-light);
       background-color: var(--vp-c-bg-alt);
@@ -35,10 +36,11 @@
 .VPNavBar[data-v-12308515] {
     position: relative;
     border-bottom: 1px solid var(--vp-c-divider-light);
-    padding: 0 8px 0 24px;
+    /* padding: 0 8px 0 24px; */
     height: var(--vp-nav-height-mobile);
     transition: border-color 0.5s, background-color 0.5s;
     pointer-events: none;
+    padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -54,15 +56,19 @@
     }
 
     .VPNavBar.has-sidebar .content[data-v-12308515] {
-        margin-right: -32px;
+        /* margin-right: -32px; */
+        margin-right: 0px;
+        margin-left: 20px;
         padding-right: 32px;
         -webkit-backdrop-filter: saturate(50%) blur(8px);
         backdrop-filter: saturate(50%) blur(8px);
+        background: transparent;
         /* background: rgba(255, 255, 255, 0.7); */
     }
 
     .dark .VPNavBar.has-sidebar .content[data-v-12308515] {
-        background: rgba(36, 36, 36, 0.7);
+        /* background: rgba(36, 36, 36, 0.7); */
+        background: transparent;
     }
 
     @supports not (backdrop-filter: saturate(50%) blur(8px)) {
@@ -71,7 +77,8 @@
         }
 
         .dark .VPNavBar.has-sidebar .content[data-v-12308515] {
-            background: rgba(36, 36, 36, 0.95);
+            /* background: rgba(36, 36, 36, 0.95); */
+            background: transparent;
         }
     }
 }
@@ -79,8 +86,11 @@
 .container[data-v-12308515] {
     display: flex;
     justify-content: space-between;
-    margin: 0 ;
+    /* margin: 0 ; */
     /* max-width: calc(var(--vp-layout-max-width) - 64px); */
+    max-width: 100vw;
+    background-color: var(--vp-c-bg-alt);
+   
     pointer-events: none;
     width: 100%;
 
@@ -124,6 +134,7 @@
 }
 .VPSidebar[data-v-1e7e9111] {
     position: fixed;
+    border-right: 1px solid var(--vp-c-divider-light);
     top: var(--vp-layout-top-height, 0px);
     bottom: 0;
     left: 0;
@@ -217,7 +228,8 @@
   }
   @media (min-width: 960px) {
     .VPNavBarTitle.has-sidebar[data-v-27a33f06] {
-        margin-right: 32px;
+        /* margin-right: 32px; */
+        margin-left: 32px;
         width: calc(var(--vp-sidebar-width) - 64px);
         border-bottom-color: var(--vp-c-divider-light);
         background-color: transparent;
