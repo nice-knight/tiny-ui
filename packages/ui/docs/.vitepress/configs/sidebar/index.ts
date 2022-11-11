@@ -37,7 +37,7 @@ export const sidebarZh = {
       text: 'Basic 基础组件',
       collapsible: true,
       items: [
-        { text: 'Button按钮', link: '/components/markdown' },
+        { text: 'Button按钮', link: '/components/button' },
         { text: 'border边框', link: '/components/asset-handling' },
         { text: 'Color色彩', link: '/components/frontmatter' },
         { text: 'Container 布局容器', link: '/components/frontmatter' },
