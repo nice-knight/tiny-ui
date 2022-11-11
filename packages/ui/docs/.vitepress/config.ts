@@ -15,8 +15,19 @@ export default defineConfig({
     lang: 'en-US',
     title: 'Tiny-ui',
     description: '麻雀团队荣誉出品',
+    head:[
+      //顶部logo  TODO
+        [
+          'link', {rel: 'icon', href:'/images/logo.png'}
+        ],
+        // 覆盖全局vitepress样式
+        [
+          'link', {rel: 'stylesheet', href:'/css/index.css'}
+        ]
+    ],
     themeConfig: {
         siteTitle: 'Tiny-ui',
+       
         nav:[
             { text: '指南', link: '/guide/what-is-Tiny-ui', activeMatch: '/guide/' },
             { text: '组件', link: '/components/introduction', activeMatch: '/components/' },
