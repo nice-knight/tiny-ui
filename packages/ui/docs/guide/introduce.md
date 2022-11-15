@@ -3,7 +3,7 @@
 Tiny-ui 是基于Vue3.0的组件库, 主要用于研发企业级中后台产品, built on top of [Vite](https://vitejs.dev/).
 
 ::: warning
-Tiny-ui 当前处于研发阶段. 
+Tiny-ui 目前还处于快速开发迭代中. 
 :::
 
 ## ✨ 特性
@@ -14,7 +14,7 @@ Tiny-ui 当前处于研发阶段.
 - ⚙️ 全链路开发和设计工具体系。
 - 🌍 国际化语言支持。
 - 🎨 深入每个细节的主题定制能力。
-
+- 🎨 适配多端。
 ## 安装
 
 ### 使用 npm 或 yarn 安装
@@ -41,6 +41,6 @@ $ yarn add Tiny-ui
 
 如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。
 
-通过 GitHub Discussions 提问时，建议使用 `Q&A` 标签。
+通过 GitHub Discussions 提问时，建议使用 `Q&T` 标签。
 
-通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 `antd` 标签。
+通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 `Tiny` 标签。
