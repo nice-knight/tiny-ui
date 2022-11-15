@@ -1,9 +1,9 @@
 # What is Tiny-ui?
 
-Tiny-ui is [VuePress](https://vuepress.vuejs.org/)' little brother, built on top of [Vite](https://vitejs.dev/).
+Tiny-ui 是基于Vue3.0的组件库, 主要用于研发企业级中后台产品, built on top of [Vite](https://vitejs.dev/).
 
 ::: warning
-Tiny-ui is currently in `alpha` status. It is already suitable for out-of-the-box documentation use, but the config and theming API may still change between minor releases.
+Tiny-ui 当前处于研发阶段. 欢迎各位感兴趣的小伙伴加入
 :::
 
 ## Motivation
