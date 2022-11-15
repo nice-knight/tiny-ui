@@ -1,9 +1,9 @@
 # What is Tiny-ui?
 
-Tiny-ui 是基于Vue3.0的组件库, 主要用于研发企业级中后台产品, built on top of [Vite](https://vitejs.dev/).
+Tiny-ui 是基于Vue3.0的组件库, 主要用于研发企业级中后台产品, 使用了目前主流的构建工具 [Vite](https://vitejs.dev/).
 
 ::: warning
-Tiny-ui 当前处于研发阶段. 欢迎各位感兴趣的小伙伴加入
+Tiny-ui 当前处于研发阶段. 欢迎各位感兴趣的小伙伴加入.
 :::
 
 ## Motivation
