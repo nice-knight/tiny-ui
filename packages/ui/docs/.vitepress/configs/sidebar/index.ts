@@ -6,9 +6,9 @@ export const sidebarZh = {
       collapsible: true,
       items: [
         { text: '安装', link: '/guide/introduce' },
-        { text: '快速开始', link: '/guide/get-start' },
         { text: '设计', link: '/guide/design' },
         { text: '导航', link: '/guide/nav' },
+        { text: '快速开始', link: '/guide/get-start' },
       ]
     },
     {
