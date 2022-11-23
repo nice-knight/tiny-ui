@@ -5,30 +5,30 @@ export const sidebarZh = {
       text: '基础',
       collapsible: true,
       items: [
-        { text: '设计', link: '/guide/what-is-vitepress' },
-        { text: '导航', link: '/guide/configuration' },
-        { text: '安装', link: '/guide/deploying' },
-        { text: '快速开始', link: '/guide/getting-started' },
+        { text: '安装', link: '/guide/introduce' },
+        { text: '设计', link: '/guide/design' },
+        { text: '导航', link: '/guide/nav' },
+        { text: '快速开始', link: '/guide/get-start' },
       ]
     },
     {
       text: '进阶',
       collapsible: true,
       items: [
-        { text: '国际化', link: '/guide/markdown' },
-        { text: '主题', link: '/guide/asset-handling' },
-        { text: '暗黑模式', link: '/guide/frontmatter' },
-        { text: '过度动画', link: '/guide/using-vue' },
-        { text: '更新日志', link: '/guide/api' }
+        { text: '国际化', link: '/guide/i18n' },
+        { text: '主题', link: '/guide/theming' },
+        { text: '暗黑模式', link: '/guide/dark-mode' },
+        { text: '过度动画', link: '/guide/transitions' },
+        { text: '更新日志', link: '/guide/change-log' }
       ]
     },
     {
       text: '开发',
       collapsible: true,
       items: [
-        { text: '开发指南', link: '/guide/markdown' },
-        { text: '开发常见问题', link: '/guide/asset-handling' },
-        { text: '提交示例', link: '/guide/frontmatter' },
+        { text: '开发指南', link: '/guide/dev-guide' },
+        { text: '开发常见问题', link: '/guide/dev-faq' },
+        { text: '提交示例', link: '/guide/commit-examples' },
       ]
     },
   ],
