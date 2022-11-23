@@ -19,6 +19,9 @@ export default defineConfig({
             rules: []
         })
     ],
+    build: {
+        sourcemap: true
+    },
     server: {
         fs: {
             // Allow serving files from one level up to the project root
