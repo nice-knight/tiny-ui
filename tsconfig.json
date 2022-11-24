@@ -20,7 +20,8 @@
         "rootDir": ".",
         "paths": {
           "@tinyUi/*": ["packages/*/src"],
-        }
+        },
+        "types": ["vite/client"]
       },
     "include": [
         "packages/*/src",
