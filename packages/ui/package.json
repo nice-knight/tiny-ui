@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/tiny-ui.mjs",
-  "module": "dist/tiny-ui.umd.js",
+  "module": "dist/tiny-ui.mjs",
   "typings": "dist/index.d.ts",
   "scripts": {
     "docs:dev": "vitepress dev docs",

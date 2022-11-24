@@ -1,9 +1,7 @@
 import DefaultTheme from 'vitepress/theme';
-import tinyUi from "../../../src/index";
+import tinyUi from "@tiny-ui/ui";
 import PreView from "./components/PreView.vue";
 import { type EnhanceAppContext } from 'vitepress'
-// 导入Unocss
-import 'uno.css';
 
 export default {
   ...DefaultTheme,
