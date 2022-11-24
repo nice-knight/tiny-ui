@@ -6,6 +6,7 @@ import { presetUno, presetAttributify, presetIcons } from 'unocss';
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import vue  from '@vitejs/plugin-vue';
 import { fileURLToPath } from 'url';
+import dts from 'vite-plugin-dts';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -35,7 +36,8 @@ const baseConfig = defineConfig({
             ],
             // rules可以新增规则, 先放置为以后需要准备
             rules: []
-        })
+        }),
+        dts(),
     ],
     build: {
         sourcemap: true
@@ -59,12 +61,13 @@ const buildAll = async () => {
         defineConfig({
             ...baseConfig,
             build: {
+                cssCodeSplit:true,
                 rollupOptions,
                 lib: {
                     entry: entryFile,
                     name: 'tiny-ui',
                     fileName: 'tiny-ui',
-                    formats: ['es']
+                    formats: ['es', 'umd']
                 },
                 outDir: outputDir
             }

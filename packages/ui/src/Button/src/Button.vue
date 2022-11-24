@@ -2,12 +2,9 @@
 
 </script>
 <template>
-  <div class="Button">
+  <div class="Button" bg-black>
     <slot name="default" />
   </div>
 </template>
 <style lang="scss">
-.Button{
-    background-color: red;
-}
 </style>
