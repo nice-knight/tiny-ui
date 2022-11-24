@@ -1,25 +1,31 @@
 {
-    "compilerOptions": {
-      "target": "esnext",
-      "useDefineForClassFields": true,
-      "module": "esnext",
-      "moduleResolution": "node",
-      "strict": true,
-      "jsx": "preserve",
-      "sourceMap": true,
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "skipLibCheck": false,
-      "lib": ["esnext", "dom"],
-      "types": ["vitest/globals"]
-    },
-    "exclude": ["node_modules"],
-    "include": [
-      "src/**/*.ts",
-      "src/**/*.d.ts",
-      "src/**/*.tsx",
-      "src/**/*.vue",
-      "scripts/**/*.ts",
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": [
+      "esnext",
+      "dom"
     ],
-    "references": [{ "path": "./tsconfig.node.json" }]
-  }
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+  ]
+}
