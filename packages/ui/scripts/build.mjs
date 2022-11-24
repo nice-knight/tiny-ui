@@ -61,12 +61,13 @@ const buildAll = async () => {
         defineConfig({
             ...baseConfig,
             build: {
+                cssCodeSplit:true,
                 rollupOptions,
                 lib: {
                     entry: entryFile,
                     name: 'tiny-ui',
                     fileName: 'tiny-ui',
-                    formats: ['es']
+                    formats: ['es', 'umd']
                 },
                 outDir: outputDir
             }
