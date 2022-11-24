@@ -1,8 +1,5 @@
 import { defineConfig, build } from 'vite';
 import {resolve,dirname} from "path";
-// 引入Unocss
-import Unocss from 'unocss/vite';
-import { presetUno, presetAttributify, presetIcons } from 'unocss';
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import vue  from '@vitejs/plugin-vue';
 import { fileURLToPath } from 'url';
@@ -27,16 +24,6 @@ const baseConfig = defineConfig({
     plugins: [
         vue(),
         vueJsx(),
-        // 使用Unocss
-        Unocss({
-            presets: [
-                presetUno(),
-                presetAttributify(),
-                presetIcons(),
-            ],
-            // rules可以新增规则, 先放置为以后需要准备
-            rules: []
-        }),
         dts(),
     ],
     build: {
@@ -61,7 +48,6 @@ const buildAll = async () => {
         defineConfig({
             ...baseConfig,
             build: {
-                cssCodeSplit:true,
                 rollupOptions,
                 lib: {
                     entry: entryFile,

@@ -20,7 +20,6 @@
       "src/**/*.tsx",
       "src/**/*.vue",
       "scripts/**/*.ts",
-      "docs/.vitepress/theme"
     ],
     "references": [{ "path": "./tsconfig.node.json" }]
   }
