@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+      "outDir": "dist",
+      "target": "ESNext" ,
+       "module": "commonjs",
+      "rootDir": "./src" /* Specify the root folder within your source files. */,
+    }
+  }
