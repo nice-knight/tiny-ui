@@ -1,0 +1,10 @@
+[
+  {
+    "componentName": "Button",
+    "compZhName": "基础选择器按钮",
+    "type": "组件",
+    "componentDesc": "默认：这是一个新组件",
+    "isNotPlugin": false
+  }
+  
+]

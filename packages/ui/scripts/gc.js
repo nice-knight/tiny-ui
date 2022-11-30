@@ -3,6 +3,7 @@
 import inquirer from "inquirer";
 import fs from "fs";
 import fse from 'fs-extra';
+import { resolve }  from 'path';
 import handlebars from "handlebars";
 import {insetComponentInstallTemplete, creatDemoTemplete, creatMdTemplete, creatTemplete, creatPluginTemplete} from './templete.js';
 
@@ -68,9 +69,9 @@ const writeFilesTemplete = async (path, temple) => {
  * @param {*} path 
  * @returns 
  */
-const readFilesTemplet = async (path) => {
+const readFilesTemplet = async (path, type='utf-8') => {
     return new Promise((resolve, reject) => {
-        fse.readFile(path, "utf-8", (err, data) => {
+        fse.readFile(path, type, (err, data) => {
             if (err) {
                 resolve(false);
             } else {
@@ -80,37 +81,69 @@ const readFilesTemplet = async (path) => {
     });
 };
 /**
+ * 读取 packages/ui/src/pluginList.json 并更新
+ */
+const writePluginListJson = async(meta)=>{
+    let filePath = './src/pluginList.json';
+    let pluginList = await readFilesTemplet(filePath);
+    const pluginListContent = JSON.parse(pluginList);
+    pluginListContent.push(meta);
+    const newListFileContentFile = JSON.stringify(pluginListContent, null, 2);
+    const updateTemplete = await writeFilesTemplete(filePath, newListFileContentFile );
+    if(updateTemplete){
+        return pluginListContent;
+    }
+};
+/**
  * 组件注册
  * @param {*} name 
  */
-const initComponent =async (name)=>{
+const initComponent =async (name, list)=>{
     // let info = await readFilesTemplet('./src/index.ts');
-    // console.log(555, info);
     const templete = insetComponentInstallTemplete(name);
     const templeteMate = {
-        importPlugins:`import { ${name}Plugin } from "./${name}";`,
-        installPlugins:`${name}Plugin.install?.(app);`,
-        exportPlugins:`export * from './${name}';`
+        importPlugins: list
+            .filter((i) => {
+                return !i.isNotPlugin;
+            })
+            .map(
+                ({ componentName }) => `import { ${componentName}Plugin } from './${componentName}';`
+            )
+            .join("\n"),
+    
+        installPlugins:list
+            .filter((i) => {
+                return !i.isNotPlugin;
+            })
+            .map(({ componentName }) => `${componentName}Plugin.install?.(app);`)
+            .join("\n    "),
+        exportPlugins:list
+            .filter((i) => {
+                return !i.isNotPlugin;
+            })
+            .map(({ componentName }) => `export * from './${componentName}'`)
+            .join("\n"),
 
     };
     const installFileContent = handlebars.compile(templete, {
         noEscape: true,
     })(templeteMate);
-    console.log(6, installFileContent);
-    // fse.outputFile(
-    //     resolve(__dirname, './src/index.ts'),
-    //     installFileContent,
-    //     (err) => {
-    //         if (err) console.log(err);
-    //     }
-    // );
+    fse.outputFile(
+        './src/index.ts',
+        installFileContent,
+        (err) => {
+            if (err) console.log(err);
+            console.log(`组件注册成功`);
+        }
+    );
 };
 /**
  * 创建组件对应文件模版
  * @param {*} name
  */
-const creatComponentsFiles = async (name) => {
-    let dirPath = `./src/${name}`;
+const creatComponentsFiles = async (info) => {
+    const { componentName } = info;
+    let dirPath = `./src/${componentName}`;
     let mainPath = await mkdirVali(`${dirPath}`);
     if (mainPath) {
         let childrenPath = await Promise.all([
@@ -119,15 +152,15 @@ const creatComponentsFiles = async (name) => {
         ]);
         if (!childrenPath.includes(false)) {
             let wirteComplete = await Promise.all([
-                writeFilesTemplete(`${dirPath}/src/${name}.vue`, creatTemplete(name)),
-                writeFilesTemplete(`${dirPath}/index.ts`, creatPluginTemplete(name)),
-                writeFilesTemplete(`${dirPath}/doc/demo.vue`,creatDemoTemplete(name)),
-                writeFilesTemplete(`${dirPath}/doc/README.md`,creatMdTemplete(name)),
+                writeFilesTemplete(`${dirPath}/src/${componentName}.vue`, creatTemplete(componentName)),
+                writeFilesTemplete(`${dirPath}/index.ts`, creatPluginTemplete(componentName)),
+                writeFilesTemplete(`${dirPath}/doc/demo.vue`,creatDemoTemplete(componentName)),
+                writeFilesTemplete(`${dirPath}/doc/README.md`,creatMdTemplete(componentName)),
             ]);
             if (!wirteComplete.includes(false)) {
                 //初始化组件
-                initComponent(name);
-                console.log(`组件创建完成，请在 src/${name} 目录进行组件开发`);
+              
+                console.log(`组件创建完成，请在 src/${componentName} 目录进行组件开发`);
             }
         }
     }
@@ -153,8 +186,26 @@ const creatComponents = async () => {
                 done(null, true);
             },
         },
+        {
+            type: "input",
+            message: "请输入组件的功能描述：",
+            name: "componentDesc",
+            default: "默认：这是一个新组件",
+        },
     ]);
-    const { componentName } = info;
-    creatComponentsFiles(componentName);
+  
+    info.type='组件';
+    info.isNotPlugin = false;
+    info.compZhName = '基础组件';
+    return info;
 };
-creatComponents();
+const run = async ()=>{
+    let info =await creatComponents();
+    const  {componentName} = info;
+    creatComponentsFiles(info);
+    // 更新组件list文件
+    const pluginlist = await writePluginListJson(info);
+    initComponent(componentName, pluginlist);
+};
+run();
+
