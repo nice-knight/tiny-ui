@@ -6,7 +6,7 @@
     <div>
       <div @click="changeCodeVisible">{{!codeVisibleFlag ? "显示" : "隐藏"}}</div>
     </div>
-    <div v-if="codeVisibleFlag">{{html}}</div>
+    <code v-if="codeVisibleFlag">{{html}}</code>
   </div>
 </template>
   
