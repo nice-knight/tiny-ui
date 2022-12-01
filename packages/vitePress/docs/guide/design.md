@@ -1,3 +1,6 @@
+---
+layout: doc
+---
 # 设计原则
 
 ## 一致 Consistency

@@ -1,9 +1,5 @@
 ---
-category: Components
-type: 通用
-title: Button
-subtitle: 按钮
-cover: https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg
+layout: doc
 ---
 
 # Button 按钮
