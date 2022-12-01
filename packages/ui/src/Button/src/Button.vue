@@ -2,7 +2,10 @@
 
 </script>
 <template>
-  <div class="Button" bg-black>
+  <div
+    class="Button"
+    bg-black
+  >
     <slot name="default" />
   </div>
 </template>
