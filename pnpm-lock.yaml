@@ -44,6 +44,8 @@ importers:
 
   packages/ui:
     specifiers:
+      '@playwright/experimental-ct-vue': ^1.28.1
+      '@playwright/test': ^1.28.1
       '@types/fs-extra': ^9.0.13
       '@types/inquirer': ^9.0.3
       '@types/node': ^18.11.9
@@ -51,6 +53,8 @@ importers:
       '@typescript-eslint/parser': ^5.45.0
       '@vitejs/plugin-vue': ^3.2.0
       '@vitejs/plugin-vue-jsx': ^2.1.1
+      '@vue/compiler-core': ^3.2.45
+      '@vue/compiler-dom': ^3.2.45
       eslint: ^8.28.0
       eslint-plugin-vue: ^9.8.0
       fs-extra: ^11.1.0
@@ -65,6 +69,8 @@ importers:
       fs-extra: 11.1.0
       inquirer: 9.1.4
     devDependencies:
+      '@playwright/experimental-ct-vue': 1.28.1_ajklay5k626t46b6fyghkbup3i
+      '@playwright/test': 1.28.1
       '@types/fs-extra': 9.0.13
       '@types/inquirer': 9.0.3
       '@types/node': 18.11.9
@@ -72,6 +78,8 @@ importers:
       '@typescript-eslint/parser': 5.45.0_eslint@8.28.0
       '@vitejs/plugin-vue': 3.2.0_vite@3.2.4
       '@vitejs/plugin-vue-jsx': 2.1.1_vite@3.2.4
+      '@vue/compiler-core': 3.2.45
+      '@vue/compiler-dom': 3.2.45
       eslint: 8.28.0
       eslint-plugin-vue: 9.8.0_eslint@8.28.0
       handlebars: 4.7.7
@@ -700,6 +708,32 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+
+  /@playwright/experimental-ct-vue/1.28.1_ajklay5k626t46b6fyghkbup3i:
+    resolution: {integrity: sha512-OiY9QoatLoZMJHhjxxwg7hNrF/J8dN7wHob2IUL5y0NQ4yLucECPxaIVYeGVZG+NOTF1l9B6hSMD0uknnewmOw==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@playwright/test': 1.28.1
+      '@vitejs/plugin-vue': 3.2.0_vite@3.2.4
+      vite: 3.2.4_ajklay5k626t46b6fyghkbup3i
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - terser
+      - vue
+    dev: true
+
+  /@playwright/test/1.28.1:
+    resolution: {integrity: sha512-xN6spdqrNlwSn9KabIhqfZR7IWjPpFK1835tFNgjrlysaSezuX8PYUwaz38V/yI8TJLG9PkAMEXoHRXYXlpTPQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.11.9
+      playwright-core: 1.28.1
+    dev: true
 
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
@@ -2832,6 +2866,12 @@ packages:
   /picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  /playwright-core/1.28.1:
+    resolution: {integrity: sha512-3PixLnGPno0E8rSBJjtwqTwJe3Yw72QwBBBxNoukIj3lEeBNXwbNiKrNuB1oyQgTBw5QHUhNO3SteEtHaMK6ag==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /postcss-selector-parser/6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
