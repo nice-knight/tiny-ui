@@ -4,7 +4,6 @@
 <template>
   <div
     class="Button"
-    bg-black
   >
     <slot name="default" />
   </div>
