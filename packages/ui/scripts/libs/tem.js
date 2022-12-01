@@ -1,3 +1,5 @@
+import {readFileTemplSync} from './node.js';
+import handlebars from "handlebars";
 /**
  * 组件导出模版
  * @param {*} name 
@@ -37,18 +39,17 @@ const creatTemplete = (name) => {
  * @param {*} name 
  * @returns 
  */
-const creatMdTemplete = (name) => {
-    return `<script setup>
-            import demo from './demo.vue'
-            </script>
-           
-            ## 基础用法
-
-            <PreView compName="${name}" demoName="demo">
-              <demo />
-            </PreView>
- `;
+const  creatMdTemplete = (name) => {
+    const templ = readFileTemplSync('./md.tpl');
+    const templeteMate = {
+        componentName: name
+    };
+    const MkileContent = handlebars.compile(templ, {
+        noEscape: true,
+    })(templeteMate);
+    return MkileContent;
 };
+
 /***
   * doc/demo.vue文件模版
  * @param {*} name 
