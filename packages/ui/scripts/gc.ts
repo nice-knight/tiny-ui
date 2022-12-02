@@ -7,7 +7,6 @@ import handlebars from "handlebars";
 import {insetComponentInstallTemplete, creatDemoTemplete, creatMdTemplete, creatTemplete, creatPluginTemplete} from './libs/temp';
 import {readFilesTemplet, writeFilesTemplete, outputFileTo, mkdirVali} from './libs/node';
 
-
 /**
  * 读取 packages/ui/src/pluginList.json 并更新
  */
@@ -105,7 +104,7 @@ const creatComponents = async () => {
                     done("请输入正确的组件名！");
                     return;
                 }
-
+                
                 done(null, true);
             },
         },
