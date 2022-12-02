@@ -1,72 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
-export interface Contributor {
-  name: string;
-  avatar: string;
-}
-
-export interface CoreTeam {
-  avatar: string;
-  name: string;
-  github: string;
-  twitter?: string;
-  sponsors?: boolean;
-  description: string;
-  packages?: string[];
-  functions?: string[];
-}
-const getAvatarUrl = (name: string) => `https://github.com/${name}.png`;
-
-const teams = ref([
-  {
-    avatar: getAvatarUrl("nice-knight"),
-    name: "nice-knight",
-    github: "nice-knight",
-    twitter: "nice-knight",
-    description: "是多个开源哭的贡献者，活动于各个社区 微信号110",
-    packages: ["motion", "gesture", "sound"],
-  },
-  {
-    avatar: getAvatarUrl("kitymore"),
-    name: "kitymore",
-    github: "kitymore",
-    twitter: "kitymore",
-    description: "是多个开源哭的贡献者，活动于各个社区 微信号1190.",
-    packages: ["components"],
-  },
-  {
-    avatar: getAvatarUrl("lqh1008"),
-    name: "lqh1008",
-    github: "lqh1008",
-    twitter: "lqh1008",
-    description: "是多个开源哭的贡献者，活动于各个社区 微信号1910.",
-    packages: ["components"],
-  },
-  {
-    avatar: getAvatarUrl("Patrick-CHenYang"),
-    name: "Patrick-CHenYang",
-    github: "Patrick-CHenYang",
-    twitter: "Patrick-CHenYang",
-    description: "是多个开源哭的贡献者，活动于各个社区 微信号1910",
-    packages: ["components"],
-  },
-  {
-    avatar: getAvatarUrl("fushengcf"),
-    name: "fushengcf",
-    github: "fushengcf",
-    twitter: "fushengcf",
-    description: "是多个开源哭的贡献者，活动于各个社区 微信号1990",
-    packages: ["components"],
-  },
-  {
-    avatar: getAvatarUrl("macx-cxxi"),
-    name: "macx-cxxi",
-    github: "macx-cxxi",
-    twitter: "macx-cxxi",
-    description: "是多个开源哭的贡献者，活动于各个社区 微信号1990",
-    packages: ["components"],
-  },
-]);
+import {teams} from '../configs/contributors'
 </script>
 
 <template>
@@ -89,12 +22,24 @@ const teams = ref([
         </div>
         <div class="linkList">
           <a
+          v-if="team?.github"
+          class="linkItem"
           :href="`https://github.com/${team.github}`"
           target="_blank"
           rel="noopener noreferrer"
           :aria-label="`${team.name} on GitHub`"
         >
-          <span class="linkItem">GitHub</span><span class="linkItem">文章</span>
+          <span >GitHub</span>
+        </a>
+        <a
+         v-if="team?.twitter"
+          class="linkItem"
+          :href="`https://github.com/${team.twitter}`"
+          target="_blank"
+          rel="noopener noreferrer"
+          :aria-label="`${team.name} on GitHub`"
+        >
+          <span >twitter</span>
         </a>
         </div>
         
@@ -117,6 +62,7 @@ const teams = ref([
   .headIcon {
     width: 100px;
     height: 100px;
+    border-radius: 50px;
     border: 1px solid #ccc;
   }
   .title {

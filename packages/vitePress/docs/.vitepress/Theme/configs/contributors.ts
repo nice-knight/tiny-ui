@@ -1,0 +1,77 @@
+const getAvatarUrl = (name: string) => `https://github.com/${name}.png`;
+const teams = [
+  {
+    avatar: getAvatarUrl("nice-knight"),
+    name: "nice-knight",
+    github: "nice-knight",
+    twitter: "nice-knight",
+    description: "是多个开源哭的贡献者，活动于各个社区 微信号110",
+    packages: ["motion", "gesture", "sound"],
+  },
+  {
+    avatar: getAvatarUrl("kitymore"),
+    name: "kitymore",
+    github: "kitymore",
+    twitter: "kitymore",
+    description: "是多个开源哭的贡献者，活动于各个社区 微信号1190.",
+    packages: ["components"],
+  },
+  {
+    avatar: getAvatarUrl("lqh1008"),
+    name: "lqh1008",
+    github: "lqh1008",
+    twitter: "lqh1008",
+    description: "是多个开源哭的贡献者，活动于各个社区 微信号1910.",
+    packages: ["components"],
+  },
+  {
+    avatar: getAvatarUrl("Patrick-CHenYang"),
+    name: "Patrick-CHenYang",
+    github: "Patrick-CHenYang",
+    twitter: "Patrick-CHenYang",
+    description: "是多个开源哭的贡献者，活动于各个社区 微信号1910",
+    packages: ["components"],
+  },
+  {
+    avatar: getAvatarUrl("fushengcf"),
+    name: "fushengcf",
+    github: "fushengcf",
+    twitter: "fushengcf",
+    description: "是多个开源哭的贡献者，活动于各个社区 微信号1990",
+    packages: ["components"],
+  },
+  {
+    avatar: getAvatarUrl("macx-cxxi"),
+    name: "macx-cxxi",
+    github: "macx-cxxi",
+    twitter: "macx-cxxi",
+    description: "是多个开源哭的贡献者，活动于各个社区 微信号1990",
+    packages: ["components"],
+  },
+  {
+    avatar: getAvatarUrl("PleasePerfunctory"),
+    name: "PleasePerfunctory",
+    github: "PleasePerfunctory",
+    twitter: "PleasePerfunctory",
+    description: "是多个开源哭的贡献者，活动于各个社区 微信号1990",
+    packages: ["components"],
+  },
+  {
+    avatar: getAvatarUrl("zengshangai"),
+    name: "zengshangai",
+    github: "zengshangai",
+    twitter: "zengshangai",
+    description: "是多个开源哭的贡献者，活动于各个社区 微信号1990",
+    packages: ["components"],
+  },
+  {
+    avatar: getAvatarUrl("ytton"),
+    name: "ytton",
+    github: "ytton",
+    twitter: "ytton",
+    description: "是多个开源哭的贡献者，活动于各个社区 微信号1990",
+    packages: ["components"],
+  },
+]
+
+export {teams}
