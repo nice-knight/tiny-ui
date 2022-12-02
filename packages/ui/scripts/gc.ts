@@ -4,8 +4,8 @@ import inquirer from "inquirer";
 import fse from 'fs-extra';
 // import { resolve }  from 'path';
 import handlebars from "handlebars";
-import {insetComponentInstallTemplete, creatDemoTemplete, creatMdTemplete, creatTemplete, creatPluginTemplete} from './libs/tem.js';
-import {readFilesTemplet, writeFilesTemplete, outputFileTo, mkdirVali} from './libs/node.js';
+import {insetComponentInstallTemplete, creatDemoTemplete, creatMdTemplete, creatTemplete, creatPluginTemplete} from './libs/temp';
+import {readFilesTemplet, writeFilesTemplete, outputFileTo, mkdirVali} from './libs/node';
 
 
 /**
@@ -13,7 +13,7 @@ import {readFilesTemplet, writeFilesTemplete, outputFileTo, mkdirVali} from './l
  */
 const writePluginListJson = async(meta)=>{
     let filePath = './src/pluginList.json';
-    let pluginList = await readFilesTemplet(filePath);
+    let pluginList:any = await readFilesTemplet(filePath);
     const pluginListContent = JSON.parse(pluginList);
     pluginListContent.push(meta);
     const newListFileContentFile = JSON.stringify(pluginListContent, null, 2);

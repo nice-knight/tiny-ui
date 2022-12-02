@@ -91,7 +91,7 @@ const readFilesTemplet = async (path, type = "utf-8") => {
 const readFileTemplSync = (path, type="utf-8")=>{
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
-    const fileTpl = fse.readFileSync(resolve(__dirname, path), type);
+    const fileTpl = fse.readFileSync(resolve(__dirname, path), type as any);
     return fileTpl;
 };
 /**

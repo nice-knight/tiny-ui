@@ -1,9 +1,10 @@
 import DefaultTheme from 'vitepress/theme';
 // import tinyUi from "@tiny-ui/ui";
 import PreView from "./components/PreView.vue";
-import Home from './components/Home.vue'
-import { type EnhanceAppContext } from 'vitepress'
-import './style/var.css'
+import Home from './components/Home.vue';
+import { type EnhanceAppContext } from 'vitepress';
+import './style/var.css';
+//import './style/index.css';
 export default {
   ...DefaultTheme,
   enhanceApp({ app }:EnhanceAppContext) {

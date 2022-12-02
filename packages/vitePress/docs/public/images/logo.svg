@@ -1,0 +1,13 @@
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="svg_2_blur">
+   <feGaussianBlur in="SourceGraphic" stdDeviation="0"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <text fill="#000000" stroke-width="0" x="398" y="172" id="svg_1" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" stroke="#000" transform="matrix(9.28592 0 0 7.28558 -3297.8 -921.767)">T</text>
+  <text fill="#000000" stroke-width="0" x="-32.11837" y="3.50455" id="svg_2" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" stroke="#000" transform="matrix(2.52394 0 0 1.20621 -0.148112 12.4288)" font-weight="bold" filter="url(#svg_2_blur)">T</text>
+  <text font-weight="bold" transform="matrix(1.85436 0 0 1.5858 -34.8973 -11.0666)" stroke="#e5e512" xml:space="preserve" text-anchor="start" font-family="'Yrsa'" font-size="24" id="svg_4" y="26.22642" x="19.62264" stroke-width="0" fill="#0be574">Ti</text>
+ </g>
+</svg>
