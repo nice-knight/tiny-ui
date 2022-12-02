@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
 import fse from 'fs-extra';
-import { resolve }  from 'path';
+import { dirname, resolve }  from 'path';
+import { fileURLToPath } from 'url';
 
+const _dirname = dirname(fileURLToPath(import.meta.url));
 const sourceDir = '';
 const targetDir = '';
 
