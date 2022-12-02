@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 import {
   navbarZh,
   sidebarZh,
-} from './configs/index.js'
+} from './configs/index'
 export default defineConfig({
     lang: 'en-US',
     title: 'Tiny-ui',
