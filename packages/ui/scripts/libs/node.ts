@@ -1,9 +1,9 @@
 import fs from "fs";
 import fse from "fs-extra";
-import {fileURLToPath} from 'url';
-import {dirname, resolve} from 'path';
+import { dirname, resolve }  from 'path';
+import { fileURLToPath } from 'url';
 
-
+const _dirname = dirname(fileURLToPath(import.meta.url));
 /**
  * 读取路径信息
  * @param {string} path 路径
@@ -89,9 +89,7 @@ const readFilesTemplet = async (path, type = "utf-8") => {
  * @returns 
  */
 const readFileTemplSync = (path, type="utf-8")=>{
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = dirname(__filename);
-    const fileTpl = fse.readFileSync(resolve(__dirname, path), type);
+    const fileTpl = fse.readFileSync(resolve(_dirname, path), type as any);
     return fileTpl;
 };
 /**

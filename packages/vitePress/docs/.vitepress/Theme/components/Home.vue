@@ -39,7 +39,7 @@ import {teams} from '../configs/contributors'
           rel="noopener noreferrer"
           :aria-label="`${team.name} on GitHub`"
         >
-          <span >twitter</span>
+          <span >Twitter</span>
         </a>
         </div>
         

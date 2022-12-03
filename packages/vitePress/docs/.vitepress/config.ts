@@ -10,12 +10,12 @@ export default defineConfig({
     head:[
       //顶部logo  TODO
         [
-          'link', {rel: 'icon', href:'/images/logo.png'}
+          'link', {rel: 'icon', href:'/images/logo.svg'}
         ],
         // 覆盖全局vitepress样式
-        [
-          'link', {rel: 'stylesheet', href:'/css/index.css'}
-        ]
+        // [
+        //   'link', {rel: 'stylesheet', href:'/style/index.css'}
+        // ]
     ],
     
     themeConfig: {
