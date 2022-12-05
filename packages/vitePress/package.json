@@ -17,6 +17,9 @@
     "@tiny-ui/ui": "workspace:*",
     "unocss": "^0.47.4"
   },
+  "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^2.1.1"
+  },
   "peerDependencies": {
     "typescript": "^4.9.3",
     "vue": "^3.2.45"
