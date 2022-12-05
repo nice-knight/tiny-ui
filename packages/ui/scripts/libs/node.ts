@@ -109,4 +109,8 @@ const outputFileTo = async (path, info) => {
         });
     });
 };
-export { readFilesTemplet, readFileTemplSync, writeFilesTemplete, outputFileTo, mkdirVali, dirExists };
+
+const getDirname = (url: string)=>{
+    return fileURLToPath(new URL('.', url));
+};
+export { readFilesTemplet, readFileTemplSync,  getDirname, writeFilesTemplete, outputFileTo, mkdirVali, dirExists };

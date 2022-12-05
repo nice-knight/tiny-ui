@@ -54,7 +54,7 @@ layout: doc
 
 <!-- 加载 demo 组件 start -->
 <script setup>
-import demo from '../Button/demo.vue'
+import demo from '../public/demo/Button/demo.vue'
 </script>
 <!-- 加载 demo 组件 end -->
 
