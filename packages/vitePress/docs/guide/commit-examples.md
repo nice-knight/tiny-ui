@@ -65,6 +65,24 @@ layout: doc
 
 
 ```md
+feat：新增功能
+fix： 修复 bug
+style: 代码格式（不影响功能，例如空格、分号等格式修正）
+refactor: refactor: 代码重构（不包括 bug 修复、功能新增）
+docs: 文档变更
+perf:性能优化
+chore: 其他修改, 比如构建流程, 依赖管理、版本好修正.
+
+ ['components', '组件相关'],
+['hooks', 'hook 相关'],
+['utils', 'utils 相关'],
+['element-ui', '对 element-ui 的调整'],
+['styles', '样式相关'],
+['deps', '项目依赖'],
+['auth', '对 auth 修改'],
+['other', '其他修改'],
+
+如下：
 feat(components): [button] 我用按钮实现了某些功能
 
 主体行和主体内容之间用空白行隔开(可以有预期时间)
@@ -73,6 +91,7 @@ feat(components): [button] 我用按钮实现了某些功能
 且每一行的总字符数限制在72个以内最优, 超过了将不易于他人理解
 
 - 你也可以通过添加子项列表符号来为内容布局
+
 ```
 
 主题标题的格式是：
