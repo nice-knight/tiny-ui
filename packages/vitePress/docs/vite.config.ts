@@ -1,10 +1,11 @@
 import { defineConfig } from "vite";
-import { resolve } from 'path';
+// import { resolve } from 'path';
+import vueJsx from "@vitejs/plugin-vue-jsx";
 export default defineConfig({
-    plugins: [],
-    resolve:{
-        alias:[
-                
+    plugins: [vueJsx()],
+    resolve: {
+        alias: [
+
         ]
     }
 });
