@@ -9,6 +9,7 @@ const TEMEPLETE_PATH = {
     DOCS_DEMO_TEMPLETE_PATH:'./templetes/docs/demo.vue.tpl',
     //SRC
     SRC_INDEX_TEMPLETE_PATH:'./templetes/src/index.vue.tpl',
+    SRC_INDEXTSX_TEMPLETE_PATH:'./templetes/src/index.tsx.tpl',
     // E2E
     E2E_TEMPLETE_PATH:'./templetes/e2e/demo.spec.tpl',
     //TEST
@@ -23,6 +24,20 @@ const TEMEPLETE_PATH = {
 const TEMPLETE_OUTPUT_PATH = {
 
 };
+/**
+ * 读取src/tsx文件模版
+ * @returns 
+ */
+const readTsxTemplete = (name)=>{
+    const templ = readFileTemplSync(TEMEPLETE_PATH.SRC_INDEXTSX_TEMPLETE_PATH);
+    const templeteMate = {
+        componentName: name
+    };
+    const content = handlebars.compile(templ, {
+        noEscape: true,
+    })(templeteMate);
+    return content;
+}
 /**
  * 读取测试模版
  */
@@ -194,7 +209,11 @@ const mkAllDir = async (info) =>{
     return childrenPath
  }
 }
-
+/**
+ * 写入模版到组件
+ * @param info 
+ * @returns 
+ */
 const writeAllTempleteToFiles = async(info)=>{
     const { componentName } = info;
     let dirPath = resolve(_dirname, `../../src/${componentName}`);
@@ -208,4 +227,23 @@ const writeAllTempleteToFiles = async(info)=>{
     ]);
     return wirteComplete;
 }
-export { initComponent, readTestTemplet, writeAllTempleteToFiles, mkAllDir, readTempletE2e, writePluginListJson, creatDemoTemplete, creatMdTemplete, creatTemplete, creatPluginTemplete};
+/**
+ * tsx组件文件创建
+ * @param info 
+ * @returns 
+ */
+const writeAllTempleteToTSXFiles = async(info)=>{
+    const { componentName } = info;
+    let dirPath = resolve(_dirname, `../../src/${componentName}`);
+    let wirteComplete = await Promise.all([
+        outputFileTo(`${dirPath}/src/${componentName}.tsx`, readTsxTemplete(componentName)),
+        outputFileTo(`${dirPath}/index.ts`, creatPluginTemplete(componentName)),
+        outputFileTo(`${dirPath}/doc/demo.tsx`,creatDemoTemplete(componentName)),
+        outputFileTo(`${dirPath}/doc/README.md`,creatMdTemplete(componentName)),
+        outputFileTo(`${dirPath}/e2e/${componentName}.spec.tsx`,readTempletE2e(componentName)),
+        outputFileTo(`${dirPath}/test/index.ts`,readTestTemplet(componentName)),
+    ]);
+    return wirteComplete;
+}
+export { initComponent, readTestTemplet, readTsxTemplete, writeAllTempleteToFiles, mkAllDir, readTempletE2e, writeAllTempleteToTSXFiles,
+    writePluginListJson, creatDemoTemplete, creatMdTemplete, creatTemplete, creatPluginTemplete};

@@ -3,7 +3,7 @@
 </script>
 <template>
   <div
-    class="Button"
+    class="{{ componentName }}"
   >
     <slot name="default" />
   </div>

@@ -10,7 +10,7 @@
     "build:lib": "vue-tsc --noEmit && vite build --config ./scripts/lib.config.ts",
     "lint": "eslint --ext .vue,.ts,.js,.jsx,.tsx,.mjs .",
     "lint:fix": "eslint --ext .vue,.ts,.js,.jsx,.tsx,.mjs . --fix",
-    "gen": "tsx ./scripts/gc.ts",
+    "gen": "tsx ./scripts/gen.ts",
     "copy": "tsx ./scripts/copy.ts",
     "e2e": "playwright test -c playwright.config.ts"
   },
