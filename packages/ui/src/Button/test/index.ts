@@ -1,2 +1,2 @@
 // vitest 
-const lintTest = 'linttest'
+const lintTest = 'linttest';
