@@ -1,2 +1,1 @@
 // vitest 
-const lintTest = 'linttest';
