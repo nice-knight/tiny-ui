@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter @tiny-ui/vitepress  docs:dev"
+    "dev": "pnpm --filter @tiny-ui/vitepress  docs:dev",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
     "node": ">=16.11.0"
   },
   "devDependencies": {
+    "husky": "^8.0.2",
     "typescript": "^4.9.3"
   },
   "dependencies": {
