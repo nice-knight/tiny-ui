@@ -84,7 +84,7 @@ const creatComponents = async () => {
 const run = async ()=>{
     let info =await creatComponents();
     const  {componentName, ComponentStyle} = info;
-    ComponentStyle==='.vue'? creatComponentsTemplete(info): creatComponentsTsx(info)
+    ComponentStyle==='.vue'? creatComponentsTemplete(info): creatComponentsTsx(info);
    
     // 更新组件list文件
     const pluginlist = await writePluginListJson(info);
