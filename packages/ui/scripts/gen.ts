@@ -52,7 +52,6 @@ const creatComponents = async () => {
                     done("请输入正确的组件名！");
                     return;
                 }
-                console.log(9, getPathExists(`./src/${answer}`))
                 if(getPathExists(`./src/${answer}`)){
                     done("已存在同名组件, 请确认后更换名字再重试。");
                     return;
