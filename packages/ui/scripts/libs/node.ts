@@ -8,26 +8,9 @@ const _dirname = dirname(fileURLToPath(import.meta.url));
  * 读取路径信息
  * @param {string} path 路径
  */
-const getStat = (path) => {
-    return new Promise((resolve, reject) => {
-        fs.exists(path, (stats) => {
-            if (stats) {
-                resolve(true);
-            } else {
-                resolve(false);
-            }
-        });
-    });
-};
-
-/**
- * 判断组件是否存在
- * @param {*} dir
- * @returns
- */
-const dirExists = async (dir) => {
-    let isExists = await getStat(dir);
-    return isExists ? true : false;
+const getPathExists = (path) => {
+   console.log(4, resolve(_dirname, path))
+   return fse.pathExistsSync(path);
 };
 
 /**
@@ -109,4 +92,8 @@ const outputFileTo = async (path, info) => {
         });
     });
 };
-export { readFilesTemplet, readFileTemplSync, writeFilesTemplete, outputFileTo, mkdirVali, dirExists };
+
+const getDirname = (url: string)=>{
+    return fileURLToPath(new URL('.', url));
+};
+export { readFilesTemplet, readFileTemplSync, getPathExists, getDirname, writeFilesTemplete, outputFileTo, mkdirVali };
