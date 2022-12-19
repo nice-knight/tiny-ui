@@ -9,8 +9,7 @@ const _dirname = dirname(fileURLToPath(import.meta.url));
  * @param {string} path 路径
  */
 const getPathExists = (path) => {
-   console.log(4, resolve(_dirname, path))
-   return fse.pathExistsSync(path);
+    return fse.pathExistsSync(path);
 };
 
 /**
