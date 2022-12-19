@@ -6,5 +6,5 @@ const Plugins: Plugin = {
    
     },
 };
-export default Plugins;
+export default Plugins;   
 export * from './Button';

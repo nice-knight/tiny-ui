@@ -11,6 +11,7 @@
     "lint": "eslint --ext .vue,.ts,.js,.jsx,.tsx,.mjs .",
     "lint:fix": "eslint --ext .vue,.ts,.js,.jsx,.tsx,.mjs . --fix",
     "gen": "tsx ./scripts/gen.ts",
+    "watcher:file": "tsx ./scripts/watcher.ts",
     "copy": "tsx ./scripts/copy.ts",
     "e2e": "playwright test -c playwright.config.ts"
   },
@@ -19,8 +20,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.28.1",
     "@playwright/experimental-ct-vue": "^1.28.1",
+    "@playwright/test": "^1.28.1",
     "@types/fs-extra": "^9.0.13",
     "@types/inquirer": "^9.0.3",
     "@types/node": "^18.11.10",
@@ -28,6 +29,8 @@
     "@typescript-eslint/parser": "^5.45.0",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vitejs/plugin-vue-jsx": "^2.1.1",
+    "@vue/compiler-core": "^3.2.45",
+    "@vue/compiler-dom": "^3.2.45",
     "eslint": "^8.29.0",
     "eslint-plugin-vue": "^9.8.0",
     "handlebars": "^4.7.7",
@@ -37,15 +40,14 @@
     "vite": "^3.2.4",
     "vite-plugin-dts": "^1.7.1",
     "vitest": "^0.25.3",
-    "vue-tsc": "^1.0.11",
-    "@vue/compiler-core": "^3.2.45",
-    "@vue/compiler-dom": "^3.2.45"
+    "vue-tsc": "^1.0.11"
   },
   "peerDependencies": {
     "typescript": "^4.9.3",
     "vue": "^3.2.45"
   },
   "dependencies": {
+    "chokidar": "^3.5.3",
     "fs-extra": "^11.1.0",
     "inquirer": "^9.1.4"
   }

@@ -57,6 +57,7 @@ importers:
       '@vitejs/plugin-vue-jsx': ^2.1.1
       '@vue/compiler-core': ^3.2.45
       '@vue/compiler-dom': ^3.2.45
+      chokidar: ^3.5.3
       eslint: ^8.29.0
       eslint-plugin-vue: ^9.8.0
       fs-extra: ^11.1.0
@@ -70,6 +71,7 @@ importers:
       vitest: ^0.25.3
       vue-tsc: ^1.0.11
     dependencies:
+      chokidar: 3.5.3
       fs-extra: 11.1.0
       inquirer: 9.1.4
     devDependencies:
