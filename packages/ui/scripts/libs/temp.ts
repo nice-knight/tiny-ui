@@ -245,5 +245,5 @@ const writeAllTempleteToTSXFiles = async(info)=>{
     ]);
     return wirteComplete;
 };
-export { initComponent, readTestTemplet, readTsxTemplete, writeAllTempleteToFiles, mkAllDir, readTempletE2e, writeAllTempleteToTSXFiles,
+export { initComponent, readTestTemplet, readTsxTemplete, writeAllTempleteToFiles, mkAllDir, readTempletE2e, writeAllTempleteToTSXFiles,insetComponentInstallTemplete,
     writePluginListJson, creatDemoTemplete, creatMdTemplete, creatTemplete, creatPluginTemplete};

@@ -10,8 +10,10 @@ import { getPathExists, outputFileTo} from './libs/node';
  * @param {*} name
  */
 const creatComponentsTemplete = async (info) => {
+   
     const { componentName } = info;
     let childrenPath:any =await mkAllDir(info);
+   
     if (childrenPath&& !childrenPath.includes(false)) {
         let wirteComplete = await writeAllTempleteToFiles(info);
         if (!wirteComplete.includes(false)) {
@@ -69,8 +71,7 @@ const creatComponents = async () => {
             type: "list",
             message: "选择要新增的类型",
             choices: [".vue", ".tsx", ],
-            name: 'ComponentStyle',
-            default: 'vue',
+            name: 'ComponentStyle'
         },
     ]);
   
@@ -84,6 +85,7 @@ const creatComponents = async () => {
 const run = async ()=>{
     let info =await creatComponents();
     const  {componentName, ComponentStyle} = info;
+   
     ComponentStyle==='.vue'? creatComponentsTemplete(info): creatComponentsTsx(info);
    
     // 更新组件list文件
